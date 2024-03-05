@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /files/01_AIMS/SAMtools</title>
+ </head>
+ <body>
+<h1>Index of /files/01_AIMS/SAMtools</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/files/01_AIMS/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="notproper.txt">notproper.txt</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">  0 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="properalign.txt">properalign.txt</a>        </td><td align="right">2024-03-04 10:00  </td><td align="right">  0 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="sample.sorted.bam">sample.sorted.bam</a>      </td><td align="right">2024-03-04 10:00  </td><td align="right">  0 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="view33rdmega.txt">view33rdmega.txt</a>       </td><td align="right">2024-03-04 10:00  </td><td align="right">  0 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="33rdaligncount.txt">33rdaligncount.txt</a>     </td><td align="right">2024-03-04 10:00  </td><td align="right">  2 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="notpropertcount.txt">notpropertcount.txt</a>    </td><td align="right">2024-03-04 10:00  </td><td align="right">  2 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="propercount.txt">propercount.txt</a>        </td><td align="right">2024-03-04 10:00  </td><td align="right">  2 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="totalaligncount.txt">totalaligncount.txt</a>    </td><td align="right">2024-03-04 10:00  </td><td align="right">  2 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024SAMtools-test.slurm">2024SAMtools-test.slurm</a></td><td align="right">2024-03-04 10:00  </td><td align="right">3.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="sample.bam">sample.bam</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">288K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /files/01_AIMS/R</title>
+ </head>
+ <body>
+<h1>Index of /files/01_AIMS/R</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/files/01_AIMS/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="Array/">Array/</a>                 </td><td align="right">2024-03-04 10:00  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="Lancaster/">Lancaster/</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="Rmpi/">Rmpi/</a>                  </td><td align="right">2024-03-04 10:00  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="bargraph.data">bargraph.data</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right"> 84 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="w1.dat">w1.dat</a>                 </td><td align="right">2024-03-04 10:00  </td><td align="right">275 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="twoaxes.data">twoaxes.data</a>           </td><td align="right">2024-03-04 10:00  </td><td align="right">293 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="remove.r">remove.r</a>               </td><td align="right">2024-03-04 10:00  </td><td align="right">354 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="bargraph.r">bargraph.r</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">379 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="log-d1.data">log-d1.data</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right">386 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024RTurpin.slurm">2024RTurpin.slurm</a>      </td><td align="right">2024-03-04 10:00  </td><td align="right">518 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024RSample.slurm">2024RSample.slurm</a>      </td><td align="right">2024-03-04 10:00  </td><td align="right">542 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="RSample.slurm">RSample.slurm</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">542 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="prime.r">prime.r</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">566 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="RTurpin.slurm">RTurpin.slurm</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">627 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="log-d2.data">log-d2.data</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right">686 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="log.r">log.r</a>                  </td><td align="right">2024-03-04 10:00  </td><td align="right">693 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="ebars-d2.data">ebars-d2.data</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">860 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="mandy.r">mandy.r</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">866 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="xvalidate.R">xvalidate.R</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="calc.r">calc.r</a>                 </td><td align="right">2024-03-04 10:00  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="strings.r">strings.r</a>              </td><td align="right">2024-03-04 10:00  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="fourtests.r">fourtests.r</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="LIBRARY">LIBRARY</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="useawk.r">useawk.r</a>               </td><td align="right">2024-03-04 10:00  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="ebars.r">ebars.r</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="twoaxes.r">twoaxes.r</a>              </td><td align="right">2024-03-04 10:00  </td><td align="right">2.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="multi.r">multi.r</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="tutorial.R">tutorial.R</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">3.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="trees91.csv">trees91.csv</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right">6.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="ebars-d1.data">ebars-d1.data</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">7.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="ebars-d4.data">ebars-d4.data</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">7.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="ebars-d3.data">ebars-d3.data</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">7.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="R_Basics.md">R_Basics.md</a>            </td><td align="right">2024-03-04 10:00  </td><td align="right"> 18K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="Rplots.pdf">Rplots.pdf</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right"> 22K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="useawk-d1.data">useawk-d1.data</a>         </td><td align="right">2024-03-04 10:00  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="useawk-d2.data">useawk-d2.data</a>         </td><td align="right">2024-03-04 10:00  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

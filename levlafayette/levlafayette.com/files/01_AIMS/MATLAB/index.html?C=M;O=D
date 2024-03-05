@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /files/01_AIMS/MATLAB</title>
+ </head>
+ <body>
+<h1>Index of /files/01_AIMS/MATLAB</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/files/01_AIMS/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="patients/">patients/</a>              </td><td align="right">2024-03-04 10:00  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="matlab-p.slurm">matlab-p.slurm</a>         </td><td align="right">2024-03-04 10:00  </td><td align="right">257 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="tictoc-p.m">tictoc-p.m</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">172 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="mypi.m">mypi.m</a>                 </td><td align="right">2024-03-04 10:00  </td><td align="right">599 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="matlab2.slurm">matlab2.slurm</a>          </td><td align="right">2024-03-04 10:00  </td><td align="right">172 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="XMATLAB">XMATLAB</a>                </td><td align="right">2024-03-04 10:00  </td><td align="right">520 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="derive_pi.slurm">derive_pi.slurm</a>        </td><td align="right">2024-03-04 10:00  </td><td align="right">135 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024matlab-p.slurm">2024matlab-p.slurm</a>     </td><td align="right">2024-03-04 10:00  </td><td align="right">368 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="polar-plot.m">polar-plot.m</a>           </td><td align="right">2024-03-04 10:00  </td><td align="right">196 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024matlab2.slurm">2024matlab2.slurm</a>      </td><td align="right">2024-03-04 10:00  </td><td align="right">173 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="sigmoid.m">sigmoid.m</a>              </td><td align="right">2024-03-04 10:00  </td><td align="right">117 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="matlab.slurm">matlab.slurm</a>           </td><td align="right">2024-03-04 10:00  </td><td align="right">285 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="2024matlab.slurm">2024matlab.slurm</a>       </td><td align="right">2024-03-04 10:00  </td><td align="right">176 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="PACKAGES">PACKAGES</a>               </td><td align="right">2024-03-04 10:00  </td><td align="right">522 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="sigmoid.ps">sigmoid.ps</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right"> 17K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="tictoc.m">tictoc.m</a>               </td><td align="right">2024-03-04 10:00  </td><td align="right"> 92 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="parpool.md">parpool.md</a>             </td><td align="right">2024-03-04 10:00  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>
