@@ -245,7 +245,9 @@ in this case the redirect `>` happens after the text to EOF is obtained.
 
 ### curly braces
 
-expands the contents. TODO: read more about this.
+Used for parameter expansion, or brace expansion.
+
+TODO: read more about this. Why is it useful.
 
 ### quotes
 

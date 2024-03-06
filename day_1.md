@@ -87,7 +87,11 @@ Linux basics
 - Interacting with the scheduler:
   - `sinfo -s`
   - `squeue [--partition=PARTITION]` shows jobs in the queue
+    - can you see the number of cores that a job is using? TODO
   - `sbatch [FILE]` run a job
+    - STDOUT gets redirected to a file. See which with scontrol (below)
+  - `scontrol show job 215646 | less` to see details of a recently completed job.
+  - `seff JOB_ID` is job status command, and will work on very old jobs.
   - `scancel JOB_ID`
   - `watch squeue`
   - for more, see on HPC: 
@@ -100,6 +104,7 @@ Linux basics
   - installing your own R libraries: ~/01_AIMS/R/LIBRARY
   - dependency example: ~/01_AIMS/depend/. There is a README and shell script in there
   - Arrays: ~/01_AIMS/Array
+    - you can also create a loop that submits jobs as an alternative to creating an array. This does the same thing as the array. If the logic for each job is exactly the same an array is better, otherwise you might need a loop that submits the jobs.
   - folders: ~/01_AIMS/folders 
 
 
