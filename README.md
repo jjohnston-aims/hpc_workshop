@@ -31,3 +31,5 @@ sshfs HPC:/export/home/f-k/jjohnsto/HMMER ~/Workspace/HPC_workshop/HMMER
 
 Most of these originally came from `/export/home/l-p/llafayet`
 but r_lesson came from `/export/home/a-e/dbarnech/`
+
+Lev's git repo: https://github.com/levlafayette/2024-AIMS-HPC

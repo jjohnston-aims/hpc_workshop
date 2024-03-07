@@ -145,6 +145,8 @@ Be careful of using conda because it's often not allowed on HPCs and using modul
 
 ### Singularity
 
+Singularity also can be built from a Dockerfile with python by this package: https://singularityhub.github.io/singularity-cli/
+
 Singularity is an alternative to docker, but the process doesn't run as root. You have the same rights outside the container as inside. It even uses the same docker docker images/commands?
 
 Gere is how we would run one:
@@ -176,7 +178,7 @@ TMPDIR=$PWD/singularity_tmpdir
 
 Then you convert it to a singularity file:
 
-`sinularity build FILENAME.sif docker-archive://FILENAME.tar`
+`singularity build FILENAME.sif docker-archive://FILENAME.tar`
 
 Then copy it to the HPC and you will be able to run your built container.
 

@@ -92,6 +92,7 @@ Linux basics
     - STDOUT gets redirected to a file. See which with scontrol (below)
   - `scontrol show job 215646 | less` to see details of a recently completed job.
   - `seff JOB_ID` is job status command, and will work on very old jobs.
+  - `srun` to run parallel jobs, in interative mode. In this way all the SBATCH flags are pass in to `srun`. See it used in 2nd session on 4th day (7/03/2024)
   - `scancel JOB_ID`
   - `watch squeue`
   - for more, see on HPC: 
