@@ -1,28 +1,24 @@
 Day 1
 ======
 
-Presenter: Lev Lafayette (University of Melbourne)
+Presenter: [Lev Lafayette](https://github.com/levlafayette) (University of Melbourne)
 
 - what is the HPC?
   - many servers in a tightly coupled network that looks like one system.
-  - good for big datasets or analysis that is complicated - ie, stuff that won't run on a laptop.
-- use in the command line: cmd line -> shell -> kernel (linux) -> hardware
-  - allows us to optimise the analysis
-- why use linux?
-  - scales well
-  - latency is low (not great for graphics)
-- scheduler determines who goes when
+  - good for big datasets or analysis that is complicated - ie, stuff that would lock up your local machine.
+- HPC is used in the command line: cmd line -> shell -> kernel (linux) -> hardware
+  - this allows us to optimise the analysis
+- use linux becuase it scales well.
+- scheduler determines who job runs when. We are using [slurm](https://slurm.schedmd.com/quickstart.html)
 - HPC versus supercomputer
-  - supercomputer is a fast computer (usually on of the fastest 500 compuers in the world. see [top500.org](https://top500.org)). This is relative to the computers of the day.
-    - measured in floating point operations per second.
+  - supercomputer is a fast computer (measured in floating point operations per second, usually on of the fastest 500 computers in the world. see [top500.org](https://top500.org)). This is relative to the computers of the day.
   - HPC is designed to be fast, with high redundancy.
 - Message Passing Interface (MPI) passes messages between nodes.
 - high throughput computing
-  - there is a tradoff been capability and capacity. ie, number of cores vs speed of interconnect.
+  - there is a trade-off been capability and capacity. ie, number of cores vs speed of interconnect.
   - this is about getting jobs completed.
-  - single core app like python or R, 
   - data parallel or task parallel
-    - data parallel is doing the same task on many different datasets. (job arrays?)
+    - data parallel is doing the same task on many different datasets. Slurm calls this a [job array](https://slurm.schedmd.com/job_array.html).
     - what is task parallel? In simulations, each cell needs to communicate it's state to other cells. Processors involved are talking to each other. eg, hydrodynamic modelling.
   - horse and cart analogy. How do we improve performance?
     - bigger horse = getting a more powerful computer. ie, a faster processor?
@@ -30,21 +26,20 @@ Presenter: Lev Lafayette (University of Melbourne)
     - get more horses (is this more cores / more nodes?)
 - 10 year reproducable research (Nature journal?)
   - because of poor documentation on the software stack.
-  - keep job submission scripts
+  - users need to keep job submission scripts
   - eg, different version of R will give slightly different results.
 - throughput - total data through
 - bandwith - number of lanes
 - latency - delay 
 - don't run jobs on the login node
-  - how would one go about running a job on the login node?
+  - this is not something you would do accidentally. You would need to intentionally open an interactive job when sshed into the HPC rather than submitting a job with the `sbatch` command. If you need interactivity you can request resources, then ssh into that node and run your stuff interactively there.
 - nodes versus cores
-  - nodes are the system units, eg a laptop.
-  - inside nodes are sockets?, which have processors, which have cores.
+  - nodes are the system units, like a laptop.
+  - nodes have processors, which have cores.
   - multithreading separates the computing activity according to different threads.
-  - threads are smallest execution unit. A core can run multiple threads. It only executes one at a time, but it switches between threads when it needs to wait (waiting to get data for example).
-  - jobs can be written as MPI or as multithreading
+  - threads are smallest execution unit. A core can run multiple threads. It only executes one at a time, but it switches between threads when it needs to wait (waiting to get data for example). A thread is an execution thread. It's usually recommended to have one thread per core.
+  - jobs can be written as MPI (OpenMPI) or as multithreading (OpenMP)
     - multithreading must be on the same computer node.
-    - MPI is easier to write in general, but more difficult to write on a single (node?), but it scales.
 - `ssh -A` is used to access another cluster from within the cluster. Do not upload your private key to a cluster to access another one.
 
 
@@ -52,7 +47,6 @@ Linux basics
 ------------
 
 - ps afux | less
-  - Why does the HPC thing I'm running R inside emacs?
 - info COMMAND 
 - whatis ls
 - man -k SEARCH_TERM
