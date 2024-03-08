@@ -1,0 +1,82 @@
+# R README file. Last update LL20211109
+
+# Basic Job Submission
+
+This folder contains files for a sample, single-processor R job, which reads in the file tutorial.R, which itself calls the 
+datasets w1.dat and trees91.csv. It is for leaf biomass of a pine tree in a high CO2 environment. With the `vanilla` option in the 
+R command, it will create a PDF of the output. The job can be submitted with:
+
+sbatch 2024Rsample.slurm
+
+Try modifying Rsample.slurm for these simple R scripts
+
+mandy.r is a short R code calculating Mandelbrot set through the first 20 iterations of equation z = z^2 + c plotted for 
+different complex constants c.
+
+This example demonstrates:
+* use of community-developed external libraries (called packages), in this case caTools package
+* handling of complex numbers
+* multidimensional arrays of numbers used as basic data type, see variables C, Z and X.
+
+# More Sample R Scripts
+
+Some more sample R scripts from Prof. Andrew Turpin https://people.eng.unimelb.edu.au/aturpin/R/
+
+log.r includes the following functions
+* read.table() is used to load data from a text file.
+* plot() is used to create axes and labels.
+* lines() is used to plot single curves.
+* t.test() is used to test if the means of the two data sets differ.
+* legend() is used to manually create a legend.
+* print() is used to output the graph.
+
+useawk.r R commands are used to filter the data, and print an average every tenth point instead of printing every point.
+Note some of the features on this graph.
+* Two plots are added to the same set of axis.
+* R is used to process the data prior to plotting.
+
+twoxes.r is useful for plotting two curves that have the same domain but different ranges.
+* plot() is used to draw plots of the graph with desired mark type and line style.
+  use type ='n' to suppress the drawing of axes, then
+  use axis to draw each axis with desired style.
+* since the two y-axes are of different ranges, 2 separate plots are used to draw plots for the 1st and 2nd y-axis.
+par(new=TRUE) is used so that the two plots end up in a single graph.
+* each axis needs major and minor ticks, axis() is called twice to draw minor and major ticks.
+* use 'pos' in y-axis (x-axis) to specify the location of y-axis (x-axis) relative to x-axis (y-axis).
+* use legend() to draw legend manually.
+* mtext() is used for drawing the label of the 2nd y-axis.
+
+strings.r uses the text function to place text on a graph. The most basic form of the function is
+* text(x, y, "text")
+* This places the word "text" at the point (x, y).
+* x, y and text can all be vectors. If vectors of different lengths are used, the shorter vectors are recycled.
+
+ebars.r includes
+* Shifting of points to left and right to separate out the points shown at each integer level.
+* Use of a function (with variable number of arguments)
+* Use of the arrows() function to draw error bars
+
+bargraph.r is a simple bar graph that makes use of the transpose function t()
+
+# Tips 'n' tricks
+
+## "join"ing two files
+
+f1 <- read.table("data1",col.names=c("word","freq"))
+f2 <- read.table("data2",col.names=c("word","length"))
+d <- merge(f1,f2,by="word")
+
+d now has three columns word, freq, length
+
+# Parallel R
+
+There is an example script for running R with MPI, RMpi.
+
+# Extensions
+
+There is also a LIBRARY file which describes how to access R extensions.
+
+# Profiling
+
+See the fourtests.r example for profiling.
+

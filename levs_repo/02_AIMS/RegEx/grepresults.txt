@@ -1,0 +1,29 @@
+$ time grep '62I' < bigfile.txt > out1.txt
+
+real	0m9.799s
+user	0m7.475s
+sys	0m2.283s
+
+$ time LC_ALL=C grep '62I' < bigfile.txt > out2.txt
+
+real	0m12.936s
+user	0m7.658s
+sys	0m2.283s
+
+$ time LC_ALL=C grep -F 62I < bigfile.txt > out3.txt
+
+real	0m9.927s
+user	0m7.492s
+sys	0m2.395s
+
+$ time parallel --pipepart -a bigfile.txt --block 100M grep '62I' > out4.txt
+
+real	0m2.208s
+user	0m8.159s
+sys	0m7.206s
+
+$ time parallel --pipepart -a bigfile.txt --block 100M LC_ALL=C grep -F 62I  > out5.txt
+
+real	0m2.495s
+user	0m8.135s
+sys	0m7.262s

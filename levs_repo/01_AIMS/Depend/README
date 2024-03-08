@@ -1,0 +1,19 @@
+It is not unusual for a user to make the launch of one job dependent on the suc cessful completion of another job. The most common example is 
+when a user wishe s to make the output of one job the input of a second job. They might launch bo th jobs simultaneously, but they do not want 
+the second job to run before the f irst job has completed successfully. In other words, they want a conditional de pendency on the job.
+
+Several conditional directives to be placed on a job which are tested prior to the job being intiatied, which are summarised as after, 
+afterany, afterok, afte rnotok, singleton (e.g., sbatch --dependency=afterok:jobid1 job2.slurm). Multip le jobs can be listed as dependencies 
+with colon separated values (e.g., `sbatc h --dependency=afterok:jobid1:jobid2 job3.slurm`).
+
+Some dependency types
+
+after:jobid[:jobid...]  job can begin after the specified jobs have started
+
+afterany:jobid[:jobid...]  job can begin after the specified jobs have terminated
+
+afternotok:jobid[:jobid...]  job can begin after the specified jobs have failed
+
+afterok:jobid[:jobid...]  job can begin after the specified jobs have run to completion with an exit code of zero.
+
+singleton	job can begin execution after all previously launched jobs with the same name and user have ended.

@@ -1,0 +1,39 @@
+ A number of these examples come from Lev Lafayette, Sequential and Parallel Programming with C and Fortran, VPAC, 2015-2016, ISBN 978-0-9943373-1-3
+
+module purge
+module load openmpi/3.1.4
+
+mpicc mpi-helloworld.c -o mpi-helloworld
+sbatch 2022mpi-helloworld.slurm
+
+mpif90 mpi-helloworld.f90 -o mpi-helloworld
+sbatch 2022mpi-helloworld.slurm
+
+mpicc mpi-ping.c -o mpi-ping
+sbatch 2022mpi-ping.slurm
+
+mpicc mpi-sendrecv.c -o mpi-sendrecv
+sbatch 2022mpi-sendrecv.slurm
+
+mpif90 mpi-sendrecv.f90 -o mpi-sendrecv
+sbatch 2022mpi-sendrecv.slurm
+
+mpicc mpi-pingpong.c -o mpi-pingpong
+sbatch 2022mpi-pingpong.slurm
+
+mpicc mpi-scatter.c -o mpi-scatter
+sbatch 2022mpi-scatter.slurm
+
+mpicc mpi-scatterv.c -o mpi-scatterv
+sbatch 2022mpi-scatterv.slurm
+
+mpicc mpi-gametheory.c -o mpi-gametheory
+sbatch 2022mpi-gametheory.slurm
+
+ You'll need compile with the math library for this one!
+
+mpicc mpi-particle.c -lm -o mpi-particle
+sbatch 2022mpi-gametheory.slurm
+
+mpicc mpi-group.c -o mpi-group
+sbatch 2022mpi-group.slurm

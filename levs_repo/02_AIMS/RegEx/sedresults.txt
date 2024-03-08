@@ -1,0 +1,13 @@
+time parallel --pipepart -a bigfile.txt --block 100M sed 's/\$//g' > sedout1.txt
+
+real	5m23.758s
+user	4m22.502s
+sys	0m25.561s
+
+
+$ time sed 's/\$//g' bigfile.txt > sedout1.txt
+
+real	0m41.322s
+user	0m29.966s
+sys	0m11.019s
+

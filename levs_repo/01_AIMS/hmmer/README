@@ -1,0 +1,23 @@
+Programs part of HMMER
+======================
+
+hmmbuild	build profile from input multiple alignment
+hmmalign	make multiple sequence alignment using a profile
+hmmsearch	search profile against sequence database
+hmmscan		search sequence against profile database
+hmmpress	prepare profile database for hmmscan
+phmmer		search single sequence against sequence database
+jackhmmer	iteratively search single sequence against database
+nhmmer		search DNA query against DNA sequence database
+nhmmscan 	search DNA sequence against a DNA profile database
+hmmfetch	retrieve profile(s) from a profile file
+hmmstat		show summary statistics for a profile file
+hmmemit		generate (sample) sequences from a profile
+hmmlogo		produce a conservation logo graphic from a profile
+hmmconvert	convert between different profile file formats
+hmmpgmd search 	daemon for the hmmer.org website
+hmmpgmd_shard	sharded search daemon for the hmmer.org website
+makehmmerdb	prepare an nhmmer binary database
+hmmsim		collect score distributions on random sequences
+alimask 	add column mask to a multiple sequence alignment
+

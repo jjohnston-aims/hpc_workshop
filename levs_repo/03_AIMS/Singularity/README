@@ -1,0 +1,62 @@
+Physical machines provide the real devices from which virtual machines (VM) and containers are examples of software virtualisation.
+
+A VM virtualise down to the hardware layers whilst containers only virtualise software layers above the operating system level.
+
+Containers are relatively lightweight and easy to modify software and they provide a consistent operating environment. 
+
+Singularity was created to bring containers into HPC; it has now moved into the Linux Foundation and renamed to 
+Apptainer. 
+
+The principles are the same; Containers allow users to have control over their operating environment, and to package everything 
+up in a reproducible manner.
+
+Programs can run inside a container as if they were running on a host system, including redirections, pipes, arguments, file 
+access etc.
+
+Apptainer can be invoked via the modules system 
+
+$ module load apptainer/1.0.3
+$ apptainer help
+..
+
+
+The 'pull' command with the docker://uri to reference OCI images served from an OCI registry. In this case pull does not just download an 
+image file. OCI images are stored in layers, so pull must also combine those layers into a usable Apptainer file.
+
+$ apptainer pull docker://ghcr.io/apptainer/lolcow
+..
+$ ls -l lolcow_latest.sif 
+-rwxrwxr-x 1 lev hpcadmin 74993664 Oct  3 15:30 lolcow_latest.sif
+
+Unlike pull, build will convert an image to the latest Apptainer image format after downloading it. Further, build to 
+convert an image between the container formats supported by Apptainer.
+
+The shell command allows you to spawn a new shell within your container and interact with it as though it were a small 
+virtual machine.
+
+Once inside of an Apptainer container, you are the same user as you are on the host system.
+
+
+$ apptainer shell lolcow_latest.sif
+Apptainer> whoami
+lev
+
+The exec command allows you to execute a custom command within a container by specifying the image file. 
+
+$ apptainer exec lolcow_latest.sif cowsay Contain This Cow!
+..
+
+
+Apptainer containers contain runscripts. These are user defined scripts that define the actions a container should perform 
+when someone runs it.
+
+
+$ apptainer run lolcow_latest.sif
+..
+$ ./lolcow_latest.sif
+
+
+The run command also works with the docker://, oras://, library://, and shub:// URIs. This creates an ephemeral container 
+that runs and then disappears.
+
+

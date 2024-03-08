@@ -1,0 +1,36 @@
+Examples for GNU Parallel.
+
+# Syntax
+{} returns a full line read from the input source. 
+{/} removes everything up to and including the last forward slash. 
+{//} returns the directory name of input line. 
+{.} removes any filename extension.
+{/.} returns the basename of the input line without extension. It is a combination of {/} and {.}.
+
+# Performance test
+$ cd Parallel
+$ cat count.sh
+$ cat numbers.txt
+$ time ./count.sh
+$ time cat numbers.txt | parallel "sleep {}; echo {}"
+
+# Convert files from mp3 to ogg
+$ tar xvf languages.tgz && cd LanguageMP3/
+$ time $(for file in ./*.mp3 ; do ffmpeg -i "${file}" "${file/%mp3/ogg}" ; done)
+$ rm *.ogg
+$ time $(parallel ffmpeg -i {} {.}.ogg ::: *.mp3)
+$ rm *.ogg
+
+# gz all those mp3 files
+$ time find . -name '*.mp3' | parallel gzip --best
+
+# Examples from Paprice Brandies
+
+# Or a directory of bam files
+$ find . -type f -name '*.bam' -print | parallel gzip
+
+# Convert csv separated files to tsv files (e.g., for awk)
+$ parallel "tr ',' '\t'  < {} > {.}.tsv" ::: *.csv
+
+# Create summary stats on bam files in parallel across 8 CPUs with the samtools flagstat command
+parallel -j 8 'samtools flagstat {} > {.}.stat' ::: *.bam

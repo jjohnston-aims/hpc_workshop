@@ -1,0 +1,41 @@
+R's extensions are known as libraries. 
+
+A lot of these have been installed by the HPC sysadmins when the main package itself is installed. To check what libraries are 
+available, load the R module and enter that environment. Then run the command to display the available libraries.
+
+$ module load R/4.1.3
+$ R
+R version 4.1.3 (2022-03-10) -- "One Push-Up"
+..
+> installed.packages(lib.loc = NULL, priority = NULL, noCache = FALSE, fields = NULL, subarch = .Platform$r_arch)
+
+Note that the libraries available will differe for each version of R. 
+
+Presence of specific libraries can be checked.
+
+> library("snow")
+Error in library("snow") : there is no package called ‘snow’
+> library("parallel")
+..
+
+Sometimes a local (personal) library is required. Create a directory for local R libraries, invoke R, and install 
+packages to that direcory. For example:
+
+$ mkdir ~/R_libs 
+$ R 
+..
+> install.packages("snow", repos="http://cran.r-project.org", lib="~/R_libs/")
+..
+> q();
+
+$ echo 'R_LIBS_USER="~/R_libs"' >  $HOME/.Renviron
+$ ls ~/R_libs/
+snow
+
+Check to see that the library path has been added correctly.
+
+$ R
+..
+> .libPaths();
+...
+
