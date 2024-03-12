@@ -1,17 +1,22 @@
 HPC Workshop day 2
 ==================
 
+Meeting link (with recording): https://teams.microsoft.com/_?culture=en-au&country=au#/scheduling-form/?isBroadcast=false&eventId=AAMkAGI0MTg0NTNlLTFkZGYtNGZlMy05ZjUwLTU1NzMxMjVjMTFjMgBGAAAAAAAUNLPbvTbAT4zd40IvswVzBwDPdM72SAffSKYUUpfX064IAAAAAAENAADPdM72SAffSKYUUpfX064IAAH_ijrHAAA%3D&conversationId=19:meeting_MjZkYzgxMTYtMzk2NC00OGM1LTgwNjAtYTc2OWMyMjJjNWY3@thread.v2&opener=1&providerType=0&navCtx=navigateHybridContentRoute&calendarType=1
+
 Links, etc
 ----------
 
 - [Unix command line examples for speed](https://adamdrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html)
+  - "...Since the data volume was only about 1.75GB containing around 2 million chess games, I was skeptical of using Hadoop for the task, ... Since the problem is basically just to look at the result lines of each file and aggregate the different results, it seems ideally suited to stream processing with shell commands. I tried this out, and for the same amount of data I was able to use my laptop to get the results in about 12 seconds (processing speed of about 270MB/sec), while the Hadoop processing took about 26 minutes (processing speed of about 1.14MB/sec)."
 - [faster than SQL](https://www.spinellis.gr/blog/20180805/index.html)
+  - the author has a join that does a full scan, then an index lookup based on the join field. Instead, he exported the two tables into files, joined them with with the Unix join command, piped the result to uniq to remove the duplicate rows, and imported the result back into the database.
+  - I think it was initially so slow because MariaDB doesn't support sort-merge joins, the server had low memory, and a HDD.
 - [vimgolf minimal keystroke challenges](https://www.vimgolf.com/)
 
 Tarballs
 --------
 
-check the contents before extracting, `tar -tf tarball.tar`
+Check the contents before extracting, `tar -tf tarball.tar`
 
 If the structure is poor it will put a load of files in the current directory, this is called a tarbomb. Recovering from a tarbomb: `tar -tf tarbomb.tar | xargs rm -rf`
 
@@ -30,7 +35,7 @@ Both STDOUT and STDERR go to the terminal so if you get an error and try to redi
 - fd1:  STDOUT `>` or `1>`
 - fd2:  STDERR `2>`
 
-You can append STDERR to STDOUT: with `2>&1` or `&|`.
+You can append STDERR to STDOUT: with `2>&1`, or `&>`.
 
 ### variable redirects
 
@@ -38,14 +43,14 @@ You can append STDERR to STDOUT: with `2>&1` or `&|`.
 
 ### tee
 
-tee allows you to create a file like a redirect and then pipe it into another command. This is useful for logging. 
+Tee allows you to create a file like a redirect and then pipe it into another command. This is useful for logging. Think of it like a T intersection.
 
-Does it also write to STDOUT? yes
+Also writes to STDOUT (unless that is piped to another command).
 
 Process streams
 ---------------
 
-In unis everything is a file, also process streams.
+In unix everything is a file, including process streams.
 
 You can generate a process stream from a command and use it like a file with `<()`
 
@@ -64,7 +69,7 @@ after ssh, put any command in quotes `''` to run it in the remote location. eg,
 ls -l
 -------
 
-Xxample output:
+Example output:
 
 ```
 total 24
@@ -162,7 +167,7 @@ eg, `s/^/  /g`
 
 substiute start of the line for 2 spaces, do it globally.
 
-eg `'/ELM/s/N/\$/3'`
+eg `'/ELM/s/N/\$/g'`
 
 "ELM" part filters lines to match the string., the last part (the flag) will only substitute the 3rd match.
 
@@ -180,6 +185,8 @@ Useful one-line sed scripts: http://sed.sourceforge.net/sed1line.txt
 
 TODO: find sed koans
 
+TODO: find out how to do the global print commands
+
 ### awk
 
 aws uses space as internal field separator. need to tell it to use other things (like `,`) if applicable.
@@ -192,6 +199,8 @@ specify a single digit field specifier with `-F"SEPARATOR"`.
 
 can count instances of a value in a column or sum a column.
 
+https://gregable.com/2010/09/why-you-should-know-just-little-awk.html
+
 ### Resources
 
 - https://www.pement.org/awk/awk1line.txt
@@ -202,7 +211,7 @@ can count instances of a value in a column or sum a column.
 - ["GAWK: Effective awk Programming," by Arnold D. Robbins (O'Reilly)](http://www.gnu.org/software/gawk/manual/)
 - [The Unix Programming Environment (Prentice-Hall Software Series)]https://www.amazon.com/Unix-Programming-Environment-Prentice-Hall-Software/dp/013937681X)
 
-## Bash scritps
+## Bash scripts
 
 `$?` stores the output of the last command
 

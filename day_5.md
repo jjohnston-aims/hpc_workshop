@@ -1,6 +1,8 @@
 HPC Workshop day 5
 ==================
 
+Meeting and recording: https://teams.microsoft.com/_?culture=en-au&country=au#/scheduling-form/?isBroadcast=false&eventId=AAMkAGI0MTg0NTNlLTFkZGYtNGZlMy05ZjUwLTU1NzMxMjVjMTFjMgBGAAAAAAAUNLPbvTbAT4zd40IvswVzBwDPdM72SAffSKYUUpfX064IAAAAAAENAADPdM72SAffSKYUUpfX064IAAH_ijrMAAA%3D&conversationId=19:meeting_Yjk1YWQ3NWUtMzE1OC00ZjQwLWJjMzctMDA0Y2U1NjQzY2M2@thread.v2&opener=1&providerType=0&navCtx=navigateHybridContentRoute&calendarType=1
+
 ## GPUs
 
 Originally designed to update all pixels at once to make graphics faster. Now is used for many parallel operations.
@@ -19,7 +21,7 @@ GPUs will become more and more common.
 
 cuda and nvhpc are applications on the AIMS HPC that are designed to run on GPUs.
 
-use the SBATCH comman `--gres=gpu:4` to say I want 4 GPUs. It's common to request the whole node when doing GPU work.
+use the SBATCH command `--gres=gpu:4` to say I want 4 GPUs. It's common to request the whole node when doing GPU work.
 
 check the GPU on the system with `nvidia-smi`.
 

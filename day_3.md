@@ -1,9 +1,29 @@
 HPC Workshop day 3
 ==================
 
+Meeting and recording: https://teams.microsoft.com/_?culture=en-au&country=au#/scheduling-form/?isBroadcast=false&eventId=AAMkAGI0MTg0NTNlLTFkZGYtNGZlMy05ZjUwLTU1NzMxMjVjMTFjMgBGAAAAAAAUNLPbvTbAT4zd40IvswVzBwDPdM72SAffSKYUUpfX064IAAAAAAENAADPdM72SAffSKYUUpfX064IAAH_ijrJAAA%3D&conversationId=19:meeting_ODhjMzllOWEtZGUxOS00YjdhLWFjYzMtNzU0MTNhOTlkNmQ4@thread.v2&opener=1&providerType=0&navCtx=navigateHybridContentRoute&calendarType=1
+
 ## MPI
 
-to use MPI the program must be written for it. see `./01_AIMS/IntroLinux/mpi-helloworld.c` for an exmpla of a C program written for MPI.
+To use MPI the program must be written for it. Here is an example of a C program written for MPI, taken from `./01_AIMS/IntroLinux/mpi-helloworld.c`:
+
+```c
+#include <stdio.h>
+#include "mpi.h"
+
+int main( argc, argv )
+int  argc;
+char **argv;
+{
+    int rank, size;
+    MPI_Init( &argc, &argv );
+    MPI_Comm_size( MPI_COMM_WORLD, &size );
+    MPI_Comm_rank( MPI_COMM_WORLD, &rank );
+    printf( "Hello world from process %d of %d\n", rank, size );
+    MPI_Finalize();
+    return 0;
+}
+```
 
 Compile the c code in an MPI way, using `mpicc` to compile:
 
@@ -20,9 +40,8 @@ run it with the two-core.slurm script. For example:
 ```bash
 #!/bin/bash
 #SBATCH --ntasks=2
-# TODO: confirm this:
-# could do:
-# #SBATCH --ntasks=1
+# the following does the same but ensures the cores on the same node (TODO: confirm this)
+# #SBATCH --nodes=1
 # #SBATCH --ntasks-per-node=2
 
 module load openmpi4/gcc/4.0.5 # this knows what mpiexec is and will run it in two cores.
@@ -30,7 +49,7 @@ module load openmpi4/gcc/4.0.5 # this knows what mpiexec is and will run it in t
 time mpiexec -n 2 ./mpi-helloworld
 ```
 
-TODO: what happens if you had `-n 3`? **It would fail because **
+If you call mpiexec with `-n` more than the nodes available, it will fail.
 
 two-nodes.slurm example:
 
@@ -147,9 +166,9 @@ Be careful of using conda because it's often not allowed on HPCs and using modul
 
 Singularity also can be built from a Dockerfile with python by this package: https://singularityhub.github.io/singularity-cli/
 
-Singularity is an alternative to docker, but the process doesn't run as root. You have the same rights outside the container as inside. It even uses the same docker docker images/commands?
+Singularity is an alternative to docker, but the process doesn't run as root. You have the same rights outside the container as inside. It even uses many of the same docker images/commands?
 
-Gere is how we would run one:
+Here is how we would run one:
 
 ```
 #!/bin/bash

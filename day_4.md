@@ -1,6 +1,11 @@
 HPC Workshop day 4
 ==================
 
+Meeting and recording:
+
+- https://teams.microsoft.com/_?culture=en-au&country=au#/scheduling-form/?isBroadcast=false&eventId=AAMkAGI0MTg0NTNlLTFkZGYtNGZlMy05ZjUwLTU1NzMxMjVjMTFjMgBGAAAAAAAUNLPbvTbAT4zd40IvswVzBwDPdM72SAffSKYUUpfX064IAAAAAAENAADPdM72SAffSKYUUpfX064IAAH_ijrLAAA%3D&conversationId=19:meeting_M2VmZjBmMDAtOTQ0OC00ZmIzLWJiMWYtZjRjOGI2YzExODVm@thread.v2&opener=1&providerType=0&navCtx=navigateHybridContentRoute&calendarType=1
+- https://teams.microsoft.com/_?culture=en-au&country=au#/scheduling-form/?isBroadcast=false&eventId=AAMkAGI0MTg0NTNlLTFkZGYtNGZlMy05ZjUwLTU1NzMxMjVjMTFjMgBGAAAAAAAUNLPbvTbAT4zd40IvswVzBwDPdM72SAffSKYUUpfX064IAAAAAAENAADPdM72SAffSKYUUpfX064IAAH_ijrKAAA%3D&conversationId=19:meeting_NDhiMTdkNzQtYTNhNS00ZDQzLWJiN2ItYTcwYTAyMjk1MjFi@thread.v2&opener=1&providerType=0&navCtx=navigateHybridContentRoute&calendarType=1
+
 ## The parallel program
 
 `sudo apt install parallel`
@@ -53,7 +58,7 @@ Need to set the `OMP_NUM_THREADS` variable, `export OMP_NUM_THREADS=4` for examp
 
 A simple parallel c example:
 
-```
+```c
 ❯ cat helloomp1.c
 #include <stdio.h>
 #include <omp.h>
