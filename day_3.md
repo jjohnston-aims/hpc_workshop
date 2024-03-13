@@ -203,6 +203,17 @@ Then copy it to the HPC and you will be able to run your built container.
 
 Diego will send details of the above summary.
 
+An alternative is to use `spython`:
+
+```bash
+module load spython
+module load singularity
+spython recipe Dockerfile Singularity.snowflake
+singularity build --fakeroot frk.simg Singularity.snowflake
+```
+
+The Dockerfile is the same one Diego used above and no modifications were made to `singularity.snowflake`.
+
 ## Parallel processing script speed
 
 [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law)
