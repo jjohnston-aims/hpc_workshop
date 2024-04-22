@@ -152,4 +152,5 @@ Questions
 ---------
 
 - what are partitions? for example in `squeue [--partition=PARTITION]`
+  - partitions are groups of resources? At AIMS, defq is the default queue (which has lower priority that the cpuq). Submit jobs with `#SBATCH --partition=cpuq`.
 
